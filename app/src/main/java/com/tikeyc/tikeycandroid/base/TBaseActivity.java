@@ -23,6 +23,8 @@ import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 
 /**
  * Created by public1 on 2017/5/25.
+ * xutils:http://blog.csdn.net/dj0379/article/details/38356773
+ * BGASwipeBackHelper:类似IOS风格，微信滑动翻动activity
  */
 
 public class TBaseActivity extends AppCompatActivity implements BGASwipeBackHelper.Delegate {
@@ -53,7 +55,16 @@ public class TBaseActivity extends AppCompatActivity implements BGASwipeBackHelp
 
     }
 
+    /**
+     * 在application的onCreate中初始化-初始化xUtils3
+     */
     private void initNavigationBar() {
+        /**
+         *  //对xUtils进行初始化
+            x.Ext.init(this);
+            //是否是开发、调试模式
+            x.Ext.setDebug(BuildConfig.DEBUG);//是否输出debug日志，开启debug会影响性能
+         */
         x.view().inject(this);
 
     }

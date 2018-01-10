@@ -33,17 +33,41 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     // https://mvnrepository.com/artifact/org.xutils/xutils
+    // -http://blog.csdn.net/u011704663/article/details/52879762
+    // -xUtils是基于Afinal开发的目前功能比较完善的一个Android开源框架，最近又发布了xUtil3.0，在增加新功能的同时又提高了框架的性能。
+    //1.xUtils包含了很多实用的android工具； xUtils支持超大文件(超过2G)上传，更全面的http请求协议支持(11种谓词)，拥有更加灵活的ORM，更多的事件注解支持且不受混淆影响；
+    //2.Utils 最低兼容Android 4.0 (api level 14)；
+    //3.xUtils3变化较多所以建立了新的项目不在旧版(github.com/wyouflf/xUtils)上继续维护, 相对于旧版本：
+    //HTTP实现替换HttpClient为UrlConnection, 自动解析回调泛型, 更安全的断点续传策略；
+    //支持标准的Cookie策略, 区分domain, path；
+    //事件注解去除不常用的功能, 提高性能；
+    //数据库api简化提高性能, 达到和greenDao一致的性能；
+    //图片绑定支持gif(受系统兼容性影响, 部分gif文件只能静态显示), webp;
+    //支持圆角, 圆形, 方形等裁剪, 支持自动旋转。
     compile 'org.xutils:xutils:3.5.0'
+
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     compile 'com.google.code.gson:gson:2.8.1'
+
     // https://mvnrepository.com/artifact/com.squareup.picasso/picasso
+    // -https://www.jianshu.com/p/c2b029f69f52
+    // -类似Glidle
     compile 'com.squareup.picasso:picasso:2.5.2'
+
     // https://mvnrepository.com/artifact/de.greenrobot/eventbus
+    // -https://www.jianshu.com/p/31e3528ca7e5-EventBus
+    // 是一个消息总线，以观察者模式实现，用于简化程序的组件、线程通信，可以轻易切换线程、开辟线程。
+    // EventBus3.0跟先前版本的区别在于加入了annotation @Subscribe，取代了以前约定命名的方式。
     compile 'de.greenrobot:eventbus:2.4.1'
-    //https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+
+    //https://github.com/CymChad/BaseRecyclerViewAdapterHelper-https://www.jianshu.com/p/52f66d82eb2f-
+    // 它可以大量减少你Adapter写的代码（和正常的Adapter相比至少三分之二的）
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.33'
+
+    //3Dtagcloudlib
     compile project(':3Dtagcloudlib')
-    // ECharts - Java类库 http://git.oschina.net/free/ECharts
+
+    // ECharts - Java类库（javascript版本的很强大） http://git.oschina.net/free/ECharts
     // https://mvnrepository.com/artifact/com.github.abel533/ECharts
     //    compile group: 'com.github.abel533', name: 'ECharts', version: '3.0.0.2'
     //    compile 'com.apkfuns.logutils:library:1.5.1.1'
@@ -53,34 +77,45 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.github.tikeyc.TNinePlaceGridView_Android:tnineplacegridviewlibrary:v1.1.1'
     compile 'com.github.tikeyc:TAndroidEChart:v1.0'
+
     //文件下载
     compile 'com.liulishuo.filedownloader:library:1.6.0'
-    //底部TabBar
+
+    //底部TabBar-github:https://github.com/ittianyu/BottomNavigationViewEx
     compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
-    //状态栏状态
+
+    //状态栏状态(沉浸式状态栏)-use:http://blog.csdn.net/lixuce1234/article/details/73991906
     compile 'com.jaeger.statusbarutil:library:1.4.0'
+
     //类似iOS的滑动返回界面
     compile 'cn.bingoogolapple:bga-swipebacklayout:1.1.4@aar'
+
     //上下拉刷新
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
     //没有使用特殊Header，可以不加这行
     compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+
     // https://mvnrepository.com/artifact/cn.jzvd/jiaozivideoplayer
     compile group: 'cn.jzvd', name: 'jiaozivideoplayer', version: '6.1.1'
+
     // https://mvnrepository.com/artifact/pl.droidsonroids.gif/android-gif-drawable
     compile group: 'pl.droidsonroids.gif', name: 'android-gif-drawable', version: '1.2.8'
+
     // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
     compile group: 'com.github.bumptech.glide', name: 'glide', version: '3.7.0'
+
     //图片轮播控件https://github.com/youth5201314/banner
     compile 'com.youth.banner:banner:1.4.10'
-    //https://github.com/jjdxmashl/jjdxm_ijkplayer
+
+    //https://github.com/jjdxmashl/jjdxm_ijkplayer-use:http://blog.csdn.net/u014608640/article/details/52607577
     compile 'com.dou361.ijkplayer:jjdxm-ijkplayer:1.0.6'
     //compile 'com.dou361.ijkplayer-armv7a:jjdxm-ijkplayer-armv7a:1.0.0' 在jjdxm-ijkplayer中默认加入了armv7a的了
     compile 'com.dou361.ijkplayer-armv5:jjdxm-ijkplayer-armv5:1.0.0'
     compile 'com.dou361.ijkplayer-arm64:jjdxm-ijkplayer-arm64:1.0.0'
     compile 'com.dou361.ijkplayer-x86:jjdxm-ijkplayer-x86:1.0.0'
     compile 'com.dou361.ijkplayer-x86_64:jjdxm-ijkplayer-x86_64:1.0.0'
-    //https://github.com/jjdxmashl/jjdxm_baseutils
+    //https://github.com/jjdxmashl/jjdxm_baseutils-use:http://p.codekk.com/detail/android/jjdxmashl/jjdxm_ijkplayer
     compile 'com.dou361.baseutils:jjdxm-baseutils:1.0.6'
+
     testCompile 'junit:junit:4.12'
 }
